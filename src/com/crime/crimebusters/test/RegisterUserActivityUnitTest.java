@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.crime.crimebusters.R;
+import com.crime.crimebusters.login.Login;
 
 public class RegisterUserActivityUnitTest extends
 		ActivityUnitTestCase<RegisterUserActivity> {
@@ -31,8 +32,10 @@ public class RegisterUserActivityUnitTest extends
 		_activity = getActivity();
 	}
 
-	protected void tearDown() {
-		// Delete user.
+	protected void tearDown() throws Exception {
+		super.tearDown();
+		Login login = new Login();
+		login.deleteUser("test.user99");
 	}
 	
 	public void testLayout() {

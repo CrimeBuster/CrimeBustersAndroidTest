@@ -6,11 +6,9 @@ import static com.google.android.apps.common.testing.ui.espresso.action.ViewActi
 import static com.google.android.apps.common.testing.ui.espresso.assertion.ViewAssertions.matches;
 import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.withId;
 import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.withText;
-import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.hasContentDescription;
 
 import com.crime.crimebusters.LoginActivity;
 import com.crime.crimebusters.R;
-import com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers;
 
 import android.test.ActivityInstrumentationTestCase2;
 
@@ -34,6 +32,22 @@ public class LoginActivityUiTest
 		onView(withId(R.id.sign_in_button)).perform(click());
 
 		onView(withId(R.id.report_button)).check(matches(withText("report")));
+	}
+	
+	public void testLoginWithEmptyUserName() {
+		onView(withId(R.id.password)).perform(typeText("test123"));
+		
+		onView(withId(R.id.sign_in_button)).perform(click());
+
+		onView(withId(R.id.sign_in_button)).check(matches(withText("Log in")));
+	}
+	
+	public void testLoginWithEmptyPassword() {
+		onView(withId(R.id.email)).perform(typeText("crime.buster"));
+		
+		onView(withId(R.id.sign_in_button)).perform(click());
+
+		onView(withId(R.id.sign_in_button)).check(matches(withText("Log in")));
 	}
 
 }
