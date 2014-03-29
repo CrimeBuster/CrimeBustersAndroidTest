@@ -53,7 +53,6 @@ public class LoginActivityUnitTest extends ActivityUnitTestCase<LoginActivity> {
 		assertNotNull("Login button is null", loginButton);
 		loginButton.performClick();
 		
-		//Thread.sleep(4000);
 		Intent triggeredIntent = getStartedActivityIntent();
 		assertNotNull("Intent was null", triggeredIntent);
 	}
