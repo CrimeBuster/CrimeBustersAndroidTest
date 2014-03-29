@@ -10,10 +10,10 @@ import android.widget.EditText;
 
 public class LoginActivityUnitTest extends ActivityUnitTestCase<LoginActivity> {
 
-	private LoginActivity activity;
-	private int loginButtonId;
-	private int emailId;
-	private int passwordId;
+	private LoginActivity _activity;
+	private int _loginButtonId;
+	private int _emailId;
+	private int _passwordId;
 	
 	public LoginActivityUnitTest() {
 		super(LoginActivity.class);
@@ -23,33 +23,33 @@ public class LoginActivityUnitTest extends ActivityUnitTestCase<LoginActivity> {
 		super.setUp();
 		Intent intent = new Intent(getInstrumentation().getTargetContext(), LoginActivity.class);
 		startActivity(intent, null, null);
-		activity = getActivity();
+		_activity = getActivity();
 	}
 	
 	public void testLayout() {		
-		emailId = R.id.email;
-		assertNotNull(activity.findViewById(emailId));
+		_emailId = R.id.email;
+		assertNotNull(_activity.findViewById(_emailId));
 		
-		passwordId = R.id.password;
-		assertNotNull(activity.findViewById(passwordId));
+		_passwordId = R.id.password;
+		assertNotNull(_activity.findViewById(_passwordId));
 		
-		loginButtonId = R.id.sign_in_button;
-		assertNotNull(activity.findViewById(loginButtonId));
+		_loginButtonId = R.id.sign_in_button;
+		assertNotNull(_activity.findViewById(_loginButtonId));
 	}
 
 	public void testIntentTriggerViaOnClick() throws InterruptedException {
-		emailId = R.id.email;
-		EditText email = (EditText)activity.findViewById(emailId);
+		_emailId = R.id.email;
+		EditText email = (EditText)_activity.findViewById(_emailId);
 		assertNotNull("Email is null", email);
 		email.setText("crime.buster");
 		
-		passwordId = R.id.password;
-		EditText password = (EditText)activity.findViewById(passwordId);
+		_passwordId = R.id.password;
+		EditText password = (EditText)_activity.findViewById(_passwordId);
 		assertNotNull("Password is null", password);
 		password.setText("test123");
 		
-		loginButtonId = R.id.sign_in_button;
-		Button loginButton = (Button)activity.findViewById(loginButtonId);
+		_loginButtonId = R.id.sign_in_button;
+		Button loginButton = (Button)_activity.findViewById(_loginButtonId);
 		assertNotNull("Login button is null", loginButton);
 		loginButton.performClick();
 		
