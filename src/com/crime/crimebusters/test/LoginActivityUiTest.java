@@ -37,17 +37,14 @@ public class LoginActivityUiTest
 	public void testLoginWithEmptyUserName() {
 		onView(withId(R.id.password)).perform(typeText("test123"));
 		
-		onView(withId(R.id.sign_in_button)).perform(click());
-
-		onView(withId(R.id.sign_in_button)).check(matches(withText("Log in")));
+		onView(withId(R.id.sign_in_button)).perform(click())
+			.check(matches(withText("Log in")));
 	}
 	
 	public void testLoginWithEmptyPassword() {
 		onView(withId(R.id.email)).perform(typeText("crime.buster"));
 		
-		onView(withId(R.id.sign_in_button)).perform(click());
-
-		onView(withId(R.id.sign_in_button)).check(matches(withText("Log in")));
+		onView(withId(R.id.sign_in_button)).perform(click())
+			.check(matches(withText("Log in")));
 	}
-
 }

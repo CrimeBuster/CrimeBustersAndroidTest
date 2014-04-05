@@ -51,9 +51,8 @@ public class RegisterUserActivityUiTest
 		onView(withId(R.id.createUser_lastName)).perform(typeText("Doe"));
 		onView(withId(R.id.createUser_email)).perform(typeText("ababan2@illinois.edu"));
 		
-		onView(withId(R.id.createUser_button)).perform(click());
-
-		onView(withId(R.id.createUser_button)).check(matches(withText("Create User")));
+		onView(withId(R.id.createUser_button)).perform(click())
+			.check(matches(withText("Create User")));
 	}
 	
 	public void testCreateUserWithEmptyPassword() {
@@ -62,9 +61,8 @@ public class RegisterUserActivityUiTest
 		onView(withId(R.id.createUser_lastName)).perform(typeText("Doe"));
 		onView(withId(R.id.createUser_email)).perform(typeText("ababan2@illinois.edu"));
 		
-		onView(withId(R.id.createUser_button)).perform(click());
-
-		onView(withId(R.id.createUser_button)).check(matches(withText("Create User")));
+		onView(withId(R.id.createUser_button)).perform(click())
+			.check(matches(withText("Create User")));
 	}
 	
 	public void testCreateUserWithEmptyFirstName() {
@@ -73,9 +71,8 @@ public class RegisterUserActivityUiTest
 		onView(withId(R.id.createUser_lastName)).perform(typeText("Doe"));
 		onView(withId(R.id.createUser_email)).perform(typeText("ababan2@illinois.edu"));
 		
-		onView(withId(R.id.createUser_button)).perform(click());
-
-		onView(withId(R.id.createUser_button)).check(matches(withText("Create User")));
+		onView(withId(R.id.createUser_button)).perform(click())
+			.check(matches(withText("Create User")));
 	}
 	
 	public void testCreateUserWithEmptyLastName() {
@@ -84,9 +81,8 @@ public class RegisterUserActivityUiTest
 		onView(withId(R.id.createUser_firstName)).perform(typeText("John"));
 		onView(withId(R.id.createUser_email)).perform(typeText("ababan2@illinois.edu"));
 		
-		onView(withId(R.id.createUser_button)).perform(click());
-
-		onView(withId(R.id.createUser_button)).check(matches(withText("Create User")));
+		onView(withId(R.id.createUser_button)).perform(click())
+			.check(matches(withText("Create User")));
 	}
 	
 	public void testCreateUserWithEmptyEmail() {
@@ -95,9 +91,8 @@ public class RegisterUserActivityUiTest
 		onView(withId(R.id.createUser_firstName)).perform(typeText("John"));
 		onView(withId(R.id.createUser_lastName)).perform(typeText("Doe"));
 		
-		onView(withId(R.id.createUser_button)).perform(click());
-
-		onView(withId(R.id.createUser_button)).check(matches(withText("Create User")));
+		onView(withId(R.id.createUser_button)).perform(click())
+			.check(matches(withText("Create User")));
 	}
 	
 	public void testCreateUserWithInvalidEmail() {
@@ -107,9 +102,8 @@ public class RegisterUserActivityUiTest
 		onView(withId(R.id.createUser_lastName)).perform(typeText("Doe"));
 		onView(withId(R.id.createUser_email)).perform(typeText("chris.ababan@gmail.com"));
 		
-		onView(withId(R.id.createUser_button)).perform(click());
-
-		onView(withId(R.id.createUser_button)).check(matches(withText("Create User")));
+		onView(withId(R.id.createUser_button)).perform(click())
+			.check(matches(withText("Create User")));
 	}
 	
 	public void testCreateUserWithLessThanSixCharPassword() {
@@ -119,8 +113,7 @@ public class RegisterUserActivityUiTest
 		onView(withId(R.id.createUser_lastName)).perform(typeText("Doe"));
 		onView(withId(R.id.createUser_email)).perform(typeText("ababan2@illinois.edu"));
 		
-		onView(withId(R.id.createUser_button)).perform(click());
-
-		onView(withId(R.id.createUser_button)).check(matches(withText("Create User")));
+		onView(withId(R.id.createUser_button)).perform(click())
+			.check(matches(withText("Create User")));
 	}
 }
