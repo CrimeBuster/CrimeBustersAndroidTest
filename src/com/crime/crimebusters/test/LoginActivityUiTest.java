@@ -1,16 +1,17 @@
 package com.crime.crimebusters.test;
 
 import static com.google.android.apps.common.testing.ui.espresso.Espresso.onView;
-import static com.google.android.apps.common.testing.ui.espresso.action.ViewActions.typeText;
 import static com.google.android.apps.common.testing.ui.espresso.action.ViewActions.click;
+import static com.google.android.apps.common.testing.ui.espresso.action.ViewActions.typeText;
 import static com.google.android.apps.common.testing.ui.espresso.assertion.ViewAssertions.matches;
 import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.withId;
 import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.Matchers.containsString;
+
+import android.test.ActivityInstrumentationTestCase2;
 
 import com.crime.crimebusters.LoginActivity;
 import com.crime.crimebusters.R;
-
-import android.test.ActivityInstrumentationTestCase2;
 
 public class LoginActivityUiTest 
 	extends ActivityInstrumentationTestCase2<LoginActivity> {
@@ -31,7 +32,8 @@ public class LoginActivityUiTest
 		
 		onView(withId(R.id.sign_in_button)).perform(click());
 
-		onView(withId(R.id.report_button)).check(matches(withText("report")));
+		onView(withId(R.id.report_button))
+			.check(matches(withText(containsString("Report"))));
 	}
 	
 	public void testLoginWithEmptyUserName() {
