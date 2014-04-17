@@ -7,6 +7,8 @@ import static com.google.android.apps.common.testing.ui.espresso.assertion.ViewA
 import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.withId;
 import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.containsString;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.test.ActivityInstrumentationTestCase2;
 
 import com.crime.crimebusters.R;
@@ -23,6 +25,14 @@ public class LoginActivityUiTest
 	public void setUp() throws Exception {
 		super.setUp();
 		getActivity();
+	}
+	
+	@Override
+	public void tearDown() throws Exception {
+		SharedPreferences preference = 
+				PreferenceManager.getDefaultSharedPreferences(getActivity());
+		preference.edit().putBoolean("isAuthenticated", false).commit();
+		super.tearDown();
 	}
 	
 	public void testLogin() { 
