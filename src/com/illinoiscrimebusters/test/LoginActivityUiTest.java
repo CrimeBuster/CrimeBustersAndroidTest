@@ -1,4 +1,4 @@
-package com.crime.crimebusters.test;
+package com.illinoiscrimebusters.test;
 
 import static com.google.android.apps.common.testing.ui.espresso.Espresso.onView;
 import static com.google.android.apps.common.testing.ui.espresso.action.ViewActions.click;
@@ -7,11 +7,10 @@ import static com.google.android.apps.common.testing.ui.espresso.assertion.ViewA
 import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.withId;
 import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.containsString;
-
 import android.test.ActivityInstrumentationTestCase2;
 
-import com.crime.crimebusters.LoginActivity;
 import com.crime.crimebusters.R;
+import com.illinoiscrimebusters.crimebusters.LoginActivity;
 
 public class LoginActivityUiTest 
 	extends ActivityInstrumentationTestCase2<LoginActivity> {

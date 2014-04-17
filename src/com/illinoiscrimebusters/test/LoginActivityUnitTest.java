@@ -1,7 +1,7 @@
-package com.crime.crimebusters.test;
+package com.illinoiscrimebusters.test;
 
-import com.crime.crimebusters.LoginActivity;
 import com.crime.crimebusters.R;
+import com.illinoiscrimebusters.crimebusters.LoginActivity;
 
 import android.content.Intent;
 import android.test.ActivityUnitTestCase;

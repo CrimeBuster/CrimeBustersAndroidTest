@@ -1,6 +1,4 @@
-package com.crime.crimebusters.test;
-
-import com.crime.crimebusters.RegisterUserActivity;
+package com.illinoiscrimebusters.test;
 
 import android.content.Intent;
 import android.test.ActivityUnitTestCase;
@@ -8,7 +6,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.crime.crimebusters.R;
-import com.crime.crimebusters.login.Login;
+import com.illinoiscrimebusters.crimebusters.RegisterUserActivity;
+import com.illinoiscrimebusters.login.Login;
 
 public class RegisterUserActivityUnitTest extends
 		ActivityUnitTestCase<RegisterUserActivity> {

@@ -1,4 +1,4 @@
-package com.crime.crimebusters.test;
+package com.illinoiscrimebusters.test;
 
 import static com.google.android.apps.common.testing.ui.espresso.Espresso.onView;
 import static com.google.android.apps.common.testing.ui.espresso.action.ViewActions.click;
@@ -9,7 +9,7 @@ import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMat
 import static org.hamcrest.Matchers.containsString;
 
 import com.crime.crimebusters.R;
-import com.crime.crimebusters.UpdateProfileActivity;
+import com.illinoiscrimebusters.crimebusters.UpdateProfileActivity;
 
 import android.test.ActivityInstrumentationTestCase2;
 
