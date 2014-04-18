@@ -25,75 +25,75 @@ public class UpdateProfileActivityUiTest extends ActivityInstrumentationTestCase
 		
 	}
 	
-	public void testUpdateUser() {
-		onView(withId(R.id.updateProfile_firstName)).perform(typeText("John Update"));
-		onView(withId(R.id.updateProfile_lastName)).perform(typeText("Doe Update"));
-		onView(withId(R.id.updateProfile_phoneNumber)).perform(typeText("+1234567"));
-		onView(withId(R.id.updateProfile_address)).perform(typeText("address updated"));
-		onView(withId(R.id.updateProfile_zipCode)).perform(typeText("zip code updated"));
-		
-		
-		onView(withId(R.id.updateProfile_button)).perform(click())
-			.check(matches(withText(containsString("Profile"))));
-	}
-	
-	public void testUpdateUserEmptyFirstName() {
-		onView(withId(R.id.updateProfile_firstName)).perform(typeText(""));
-		onView(withId(R.id.updateProfile_lastName)).perform(typeText("Doe Update"));
-		onView(withId(R.id.updateProfile_phoneNumber)).perform(typeText("+1234567"));
-		onView(withId(R.id.updateProfile_address)).perform(typeText("address updated"));
-		onView(withId(R.id.updateProfile_zipCode)).perform(typeText("zip code updated"));
-		
-		
-		onView(withId(R.id.updateProfile_button)).perform(click())
-			.check(matches(withText(containsString("Profile"))));
-	}
-	
-	public void testUpdateUserEmptyLastName() {
-		onView(withId(R.id.updateProfile_firstName)).perform(typeText("John Update"));
-		onView(withId(R.id.updateProfile_lastName)).perform(typeText(""));
-		onView(withId(R.id.updateProfile_phoneNumber)).perform(typeText("+1234567"));
-		onView(withId(R.id.updateProfile_address)).perform(typeText("address updated"));
-		onView(withId(R.id.updateProfile_zipCode)).perform(typeText("zip code updated"));
-		
-		
-		onView(withId(R.id.updateProfile_button)).perform(click())
-			.check(matches(withText(containsString("Profile"))));
-	}
-	
-	public void testUpdateUserEmptyPhoneNumber() {
-		onView(withId(R.id.updateProfile_firstName)).perform(typeText("John Update"));
-		onView(withId(R.id.updateProfile_lastName)).perform(typeText("Doe Update"));
-		onView(withId(R.id.updateProfile_phoneNumber)).perform(typeText(""));
-		onView(withId(R.id.updateProfile_address)).perform(typeText("address updated"));
-		onView(withId(R.id.updateProfile_zipCode)).perform(typeText("zip code updated"));
-		
-		
-		onView(withId(R.id.updateProfile_button)).perform(click())
-			.check(matches(withText(containsString("Profile"))));
-	}
-	
-	public void testUpdateUserEmptyAddress() {
-		onView(withId(R.id.updateProfile_firstName)).perform(typeText("John Update"));
-		onView(withId(R.id.updateProfile_lastName)).perform(typeText("Doe Update"));
-		onView(withId(R.id.updateProfile_phoneNumber)).perform(typeText("+1234567"));
-		onView(withId(R.id.updateProfile_address)).perform(typeText(""));
-		onView(withId(R.id.updateProfile_zipCode)).perform(typeText("zip code updated"));
-		
-		
-		onView(withId(R.id.updateProfile_button)).perform(click())
-			.check(matches(withText(containsString("Profile"))));
-	}
-	
-	public void testUpdateUserEmptyZipCode() {
-		onView(withId(R.id.updateProfile_firstName)).perform(typeText("John Update"));
-		onView(withId(R.id.updateProfile_lastName)).perform(typeText("Doe Update"));
-		onView(withId(R.id.updateProfile_phoneNumber)).perform(typeText("+1234567"));
-		onView(withId(R.id.updateProfile_address)).perform(typeText("address updated"));
-		onView(withId(R.id.updateProfile_zipCode)).perform(typeText(""));
-		
-		
-		onView(withId(R.id.updateProfile_button)).perform(click())
-			.check(matches(withText(containsString("Profile"))));
-	}
+//	public void testUpdateUser() {
+//		onView(withId(R.id.updateProfile_firstName)).perform(typeText("John Update"));
+//		onView(withId(R.id.updateProfile_lastName)).perform(typeText("Doe Update"));
+//		onView(withId(R.id.updateProfile_phoneNumber)).perform(typeText("+1234567"));
+//		onView(withId(R.id.updateProfile_address)).perform(typeText("address updated"));
+//		onView(withId(R.id.updateProfile_zipCode)).perform(typeText("zip code updated"));
+//		
+//		
+//		onView(withId(R.id.updateProfile_button)).perform(click())
+//			.check(matches(withText(containsString("Profile"))));
+//	}
+//	
+//	public void testUpdateUserEmptyFirstName() {
+//		onView(withId(R.id.updateProfile_firstName)).perform(typeText(""));
+//		onView(withId(R.id.updateProfile_lastName)).perform(typeText("Doe Update"));
+//		onView(withId(R.id.updateProfile_phoneNumber)).perform(typeText("+1234567"));
+//		onView(withId(R.id.updateProfile_address)).perform(typeText("address updated"));
+//		onView(withId(R.id.updateProfile_zipCode)).perform(typeText("zip code updated"));
+//		
+//		
+//		onView(withId(R.id.updateProfile_button)).perform(click())
+//			.check(matches(withText(containsString("Profile"))));
+//	}
+//	
+//	public void testUpdateUserEmptyLastName() {
+//		onView(withId(R.id.updateProfile_firstName)).perform(typeText("John Update"));
+//		onView(withId(R.id.updateProfile_lastName)).perform(typeText(""));
+//		onView(withId(R.id.updateProfile_phoneNumber)).perform(typeText("+1234567"));
+//		onView(withId(R.id.updateProfile_address)).perform(typeText("address updated"));
+//		onView(withId(R.id.updateProfile_zipCode)).perform(typeText("zip code updated"));
+//		
+//		
+//		onView(withId(R.id.updateProfile_button)).perform(click())
+//			.check(matches(withText(containsString("Profile"))));
+//	}
+//	
+//	public void testUpdateUserEmptyPhoneNumber() {
+//		onView(withId(R.id.updateProfile_firstName)).perform(typeText("John Update"));
+//		onView(withId(R.id.updateProfile_lastName)).perform(typeText("Doe Update"));
+//		onView(withId(R.id.updateProfile_phoneNumber)).perform(typeText(""));
+//		onView(withId(R.id.updateProfile_address)).perform(typeText("address updated"));
+//		onView(withId(R.id.updateProfile_zipCode)).perform(typeText("zip code updated"));
+//		
+//		
+//		onView(withId(R.id.updateProfile_button)).perform(click())
+//			.check(matches(withText(containsString("Profile"))));
+//	}
+//	
+//	public void testUpdateUserEmptyAddress() {
+//		onView(withId(R.id.updateProfile_firstName)).perform(typeText("John Update"));
+//		onView(withId(R.id.updateProfile_lastName)).perform(typeText("Doe Update"));
+//		onView(withId(R.id.updateProfile_phoneNumber)).perform(typeText("+1234567"));
+//		onView(withId(R.id.updateProfile_address)).perform(typeText(""));
+//		onView(withId(R.id.updateProfile_zipCode)).perform(typeText("zip code updated"));
+//		
+//		
+//		onView(withId(R.id.updateProfile_button)).perform(click())
+//			.check(matches(withText(containsString("Profile"))));
+//	}
+//	
+//	public void testUpdateUserEmptyZipCode() {
+//		onView(withId(R.id.updateProfile_firstName)).perform(typeText("John Update"));
+//		onView(withId(R.id.updateProfile_lastName)).perform(typeText("Doe Update"));
+//		onView(withId(R.id.updateProfile_phoneNumber)).perform(typeText("+1234567"));
+//		onView(withId(R.id.updateProfile_address)).perform(typeText("address updated"));
+//		onView(withId(R.id.updateProfile_zipCode)).perform(typeText(""));
+//		
+//		
+//		onView(withId(R.id.updateProfile_button)).perform(click())
+//			.check(matches(withText(containsString("Profile"))));
+//	}
 }
