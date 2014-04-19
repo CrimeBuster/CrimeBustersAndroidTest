@@ -7,8 +7,9 @@ import static com.google.android.apps.common.testing.ui.espresso.assertion.ViewA
 import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.withId;
 import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.containsString;
+import android.app.Activity;
+import android.content.Context;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.test.ActivityInstrumentationTestCase2;
 
 import com.crime.crimebusters.R;
@@ -16,7 +17,8 @@ import com.illinoiscrimebusters.crimebusters.LoginActivity;
 
 public class LoginActivityUiTest 
 	extends ActivityInstrumentationTestCase2<LoginActivity> {
-
+	private Activity _activity;
+	
 	public LoginActivityUiTest() {
 		super(LoginActivity.class);
 	}
@@ -24,14 +26,16 @@ public class LoginActivityUiTest
 	@Override
 	public void setUp() throws Exception {
 		super.setUp();
-		getActivity();
+		_activity = getActivity();
 	}
 	
 	@Override
-	public void tearDown() throws Exception {
+	public void tearDown() throws Exception {		
+		_activity.getApplicationContext();
 		SharedPreferences preference = 
-				PreferenceManager.getDefaultSharedPreferences(getActivity());
+				_activity.getSharedPreferences("cbPreference", Context.MODE_PRIVATE);
 		preference.edit().putBoolean("isAuthenticated", false).commit();
+		
 		super.tearDown();
 	}
 	

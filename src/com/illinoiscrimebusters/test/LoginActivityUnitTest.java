@@ -51,12 +51,10 @@ public class LoginActivityUnitTest extends ActivityUnitTestCase<LoginActivity> {
 		assertNotNull("Email is null", email);
 		email.setText("crime.buster");
 
-
 		_passwordId = R.id.password;
 		EditText password = (EditText)_activity.findViewById(_passwordId);
 		assertNotNull("Password is null", password);
 		password.setText("test123");
-
 
 		_createUserButtonId = R.id.create_user_button;
 		Button createUserButton = (Button)_activity.findViewById(_createUserButtonId);
